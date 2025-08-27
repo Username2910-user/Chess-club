@@ -5,46 +5,57 @@
   padding: 0;
 }
 
+/* Adding gradient background to body */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #fb8500;
+  background: linear-gradient(135deg, #fb8500, #f1a737 100%);
   color: #222;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 }
 
-
-nav {
-  background-color: #fca400;
-  padding: 0 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  height: 80px;
+  nav {
+  background-color: #fff;
+  color: #e5780a;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-bottom: 3px solid #e5780a;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.2rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 32px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-  color: white;
+  color: #e5780a;
+  font-weight: bold;
+  letter-spacing: 1px;
   text-decoration: none;
-  font-size: 1.2rem;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: back ground 0.2s;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  background: #e5780a;
-}
+  background: #ffe0c2;
+  color: #fb8500;}
 
+header {
+  background: #ffb703;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
 .hero {
   text-align: center;
@@ -70,6 +81,7 @@ nav ul li a.active {
   gap: 24px;
   margin: 40px 0;
   flex-wrap: wrap;
+  transition: transform 0.2s, box-shadow 0.2s;  
 }
 
 .chess-images img {
@@ -77,9 +89,14 @@ nav ul li a.active {
   height: 250px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transform: scale(1.05);
+  box-shadow: 0.8px 24px rgba(0,0,0,0.18);
+  
 }
-
+.chess-images img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
 
 main.main-content {
   width: 100%;
@@ -88,8 +105,10 @@ main.main-content {
   padding: 40px 20px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  box-shadow: 0.8px 32px rgba(0,0,0,0.10);
   text-align: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 p {
@@ -121,6 +140,22 @@ p {
   .hero h1 {
     font-size: 2rem;
   }
+}
+
+/* Just added some hovering features in the videos for better interactivity */
+.video-section iframe,
+.video-section video {
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+    margin: 24px auto;
+}
+
+.video-section iframe:hover,
+.video-section video:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.28);
 }
 
 
